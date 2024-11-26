@@ -1,0 +1,353 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: Arial;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 100px;
+  gap: 20px;
+  min-width: 40px;
+  
+  background: url('../assets/nav-bg.jpg');
+  
+  z-index: 1;
+}
+
+.logo-img{
+  max-width: 150px;
+  min-width: 120px;
+}
+
+.logo-img img{
+  max-width: 100%;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu a{
+  color: #ffffff;
+  background-color: forestgreen;
+  font-weight: 900;
+  padding: 2px;
+  /* text-decoration: dashed; */
+}
+
+.menu a, .logo-img a{
+  transition: 0.2s;
+}
+
+nav a:hover, .logo-img a:hover{
+  opacity: 0.7;
+}
+
+h3{
+  font-weight: normal;
+}
+
+main{
+  background-color: #fbfbfb;
+  flex: 1 0 auto;
+  padding: 40px 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+main section{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.main-text{
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  text-align: justify;
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.main-title{
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  text-align: justify;
+}
+
+.main-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  min-width: 200px;
+}
+
+.main-img img{
+  max-width: 100%;
+   
+}
+
+footer{
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #7eff7e;
+}
+
+.social-media-container img{
+  width: 20px;
+  transition: 0.2s;
+}
+
+.social-media-container img:hover{
+  opacity: 0.7;
+}
+
+.social-media-container a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* configuração dos cards */
+
+.card-container{
+  background: url('../assets/floresta-banner.jpg');
+  background-position: center;
+  background-size: cover;
+
+  border: 2px solid #3f3f3f;
+  border-radius: 8px;
+  
+  min-width: 270px;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card{
+  border: 2px solid #3f3f3f;
+  box-shadow: 1px 1px 15px black;
+  width: 250px;
+  height: 350px;
+  background-color: #7eff7e;
+  padding: 5px;
+  margin: 10px; /* Vai funcionar igual gap */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-img{
+  width: 100%;
+  height: 100%;
+}
+
+.card-img img{
+  max-width: 100%;
+}
+
+.card-description{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #2c2c2c;
+  text-align: left;
+}
+
+.card a{
+  color: #0b6f6e;
+  transition: 0.2s;
+}
+
+.card-link a:hover{
+  opacity: 0.6;
+}
+
+
+/* Configuração do formulário */
+
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #aeff97;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.input-field :not(input[type=submit]), .input-field select{
+  padding: 5px 2px;
+  color: #2c2c2c;
+  font-size: 1rem;
+}
+
+.input-field :not(input[type=submit]), .input-field :not(textarea){
+  border: 0;
+  border-bottom: 1px solid rgb(91, 86, 86);
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+.input-field :not(input[type=submit]):focus{
+  outline:  0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.input-field input[type=submit]{
+  border: none;
+  max-width: 100px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #fca61e;
+  color: #2c2c2c;
+  font-size: 1rem;
+  font-weight: 600;
+  
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.input-field input[type=submit]:hover{
+  opacity: 0.7;
+}
+
+#input-textarea{
+  resize: none;
+  background-color: transparent;
+  border: 1px solid rgb(91, 86, 86);
+  padding: 5px;
+  transition: 0.2s;
+}
+
+#input-textarea:focus{
+  border: 1px solid #fff;
+  outline: 0;
+}
+
+@media screen and (max-width: 740px){
+  nav{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+}
+
+@media screen and (max-width: 560px){
+  nav{
+    padding: 30px 40px;
+  }
+  
+  .menu{
+    flex-direction: column;
+  }
+  
+  .menu a{
+    font-size: 0.8rem;
+  }
+
+
+  main{
+    padding: 40px 30px;
+  }
+
+  .main-text{
+    font-size: 1rem;
+    max-width: 800px;
+  }
+  
+  .main-title{
+    font-size: 1.3rem;
+  }
+  
+  /* Responsividade cards */
+
+  .card-container{
+    display: none;
+  }
+
+  .card{
+    display: none; 
+  }
+
+  /* Responsividade formulário */
+
+  .formulario{
+    padding: 5px;
+    
+  }
+
+  .input-field :not(input[type=submit]), .input-field select{
+    padding: 2px;
+    color: #2c2c2c;
+    font-size: 0.8rem;
+  }
+
+  .input-field input[type=submit]{
+    padding: 1px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+}
+
+@media screen and (max-width: 340px){
+  main{
+    padding: 40px 5px;
+  }
+
+  .main-text{
+    font-size: 0.8rem;
+  }
+
+  .formulario{
+    padding: 1px;
+  }
+}
+
